@@ -1,12 +1,10 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import { Grid } from '@material-ui/core';
+import React from 'react';
+
+import { Paper, Typography, Grid } from '@material-ui/core/';
+
 import './syle.css';
 
 import Logo from '../asset/Main.jpg';
-import CardMedia from '@mui/material/CardMedia';
 
 export default function Main() {
   return (

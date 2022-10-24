@@ -1,10 +1,14 @@
 import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup, { useRadioGroup } from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import { styled } from '@mui/material/styles';
+
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormLabel,
+  styled,
+  useRadioGroup,
+  FormControl,
+} from '@material-ui/core';
 export default function RadioButton() {
   // Style the form control
   const StyledFormControlLabel = styled((props) => (
@@ -17,7 +21,6 @@ export default function RadioButton() {
   }));
 
   function MyFormControlLabel(props) {
-    // MUI UseRadio Group
     const radioGroup = useRadioGroup();
 
     let checked = false;

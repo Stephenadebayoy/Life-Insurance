@@ -1,13 +1,12 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Paper from '@material-ui/core/Paper';
+import { styled } from '@material-ui/core/styles';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import Pics from '../asset/lifeinsur.webp';
 import Family from '../asset/family2.webp';
@@ -22,20 +21,22 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function About() {
   return (
-    <Stack spacing={2} alignItems='center'>
-      <Stack
-        spacing={0.8}
-        gap={1}
-        flexWrap='wrap'
-        direction='row'
-        justifyContent='center'
+    <Grid alignItems='center' spacing={2}>
+      <Grid
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          direction: 'row',
+          justifyContent: 'center',
+        }}
       >
         <Item>
-          <Grid item>
-            <Card sx={{ maxWidth: 345 }}>
+          <Grid item data-aos='fade-up' data-aos-easing='linear'>
+            <Card style={{ maxWidth: 345 }}>
               <CardMedia
                 component='img'
-                height='140'
+                height='200'
                 image={Family}
                 alt='Family Insurance'
                 padding='20px'
@@ -57,18 +58,12 @@ export default function About() {
           </Grid>
         </Item>
         <Item>
-          {' '}
-          <Grid item>
-            <Card
-              sx={{
-                maxWidth: 345,
-                padding: '0 1.5rem',
-              }}
-            >
+          <Grid item data-aos='fade-up' data-aos-easing='linear'>
+            <Card style={{ maxWidth: 345 }}>
               <CardMedia
                 component='img'
                 image={Pics}
-                height='140'
+                height='200'
                 alt='green iguana'
               />
               <CardContent>
@@ -87,17 +82,12 @@ export default function About() {
           </Grid>
         </Item>
         <Item>
-          <Grid item>
-            <Card
-              sx={{
-                maxWidth: 345,
-                padding: '0 1.5rem',
-              }}
-            >
+          <Grid item data-aos='fade-up' data-aos-easing='linear'>
+            <Card style={{ maxWidth: 345 }}>
               <CardMedia
                 component='img'
                 image={Digital}
-                height='140'
+                height='200'
                 alt='green iguana'
               />
               <CardContent>
@@ -117,7 +107,7 @@ export default function About() {
             </Card>
           </Grid>
         </Item>
-      </Stack>
-    </Stack>
+      </Grid>
+    </Grid>
   );
 }

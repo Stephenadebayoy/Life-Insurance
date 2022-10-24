@@ -10,7 +10,7 @@ const Footer = () => {
           style={{ color: '#000', textAlign: 'center', marginTop: '5rem' }}
         >
           Life Insurance <br />
-          &copy;Copyright All rights reserved
+          Copyright &copy; 20222, Insure. All rights reserved
         </Typography>
       </div>
     </div>

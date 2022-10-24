@@ -4,12 +4,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Logo from '../asset/Logo.jpg';
-import Login from '@material-ui/icons';
+
 import { Link } from 'react-router-dom';
-import MenuItem from '@material-ui/core/MenuItem';
+
 import Menu from '@material-ui/core/Menu';
 import { Avatar, makeStyles, Button } from '@material-ui/core';
 
@@ -55,16 +55,7 @@ export default function Navbar() {
             src={Logo}
             sx={{ width: 56, height: 56 }}
           ></Avatar>
-          {/* <IconButton
-            size='large'
-            edge='start'
-            color='inherit'
-            aria-label='menu'
-            sx={{ mr: 2 }}
-            className={classes.menuButton}
-          >
-          
-          </IconButton> */}
+
           <Typography
             variant='h6'
             component='div'
@@ -100,9 +91,6 @@ export default function Navbar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem> */}
-
                 <Button
                   component={Link}
                   to={'/form'}
